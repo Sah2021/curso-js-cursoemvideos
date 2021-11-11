@@ -1,2 +1,2 @@
-# curso-js-cursoemvideos
-Atividades e desafios do curso de JS do Curso em Vídeo
+# Curso de JavaScript do Curso em Vídeo
+### Atividades e desafios do curso de JavaScipt do Curso em Vídeo com o **profº Gustavo Guanabara**
