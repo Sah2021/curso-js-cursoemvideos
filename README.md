@@ -1,6 +1,7 @@
 # Curso de JavaScript do Curso em Vídeo
 ### Atividades e desafios do curso de JavaScipt do Curso em Vídeo com o **profº Gustavo Guanabara**
 
+<<<<<<< Updated upstream
 **Desafios**     
    1. Desafio das Mensagens
    2. Boas vindas! :grinning:
@@ -32,3 +33,5 @@ Exercícios feitos durante as aulas
 ![Certificado](certificado-js.jpg)
 
 
+=======
+>>>>>>> Stashed changes
