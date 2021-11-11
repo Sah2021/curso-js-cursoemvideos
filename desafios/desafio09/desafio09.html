@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 09 de JavaScript</title>
+</head>
+
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(195, 211, 189);
+        color: rgb(3, 66, 50);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgb(2, 31, 15);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 3px rgb(44, 29, 2);
+        font-size: 20pt;
+        padding: 15px;
+    }
+    button:hover{
+        background-color: rgb(245, 232, 205);
+    } 
+    p#botao{
+        font-size: 15px;
+    }   
+           
+</style>
+<!--Fim do CSS-->
+
+<body>
+    <h1>Desafio 09 de JavaScript</h1>
+    <h2>Reajuste salarial</h2>
+    <p><button onclick='calcular()'>Calcular reajuste</button></p>
+    <p id='botao'>Clique no botão acima para iniciar</p>
+    <section id='res'></section>    
+</body>
+
+<script>
+    function calcular(){
+        var nome = window.prompt ('Qual o nome completo do funcionário?')
+        var salario = Number.parseFloat(window.prompt(`Qual o salário de ${nome}?`))
+        var reaj = Number.parseFloat (window.prompt (`O salário de ${nome} será reajustado em qual porcentagem?`))
+        var result = document.querySelector('section#res')
+        var aumento = (salario*reaj)/100
+        result.innerHTML = `<strong><p>${nome} recebeu um aumento salarial!</p></strong>
+        <p>O salário atual é de R$ ${salario.toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})}</p>
+        <p>Com um aumento de ${reaj}%, o salário vai aumentar R$ ${aumento.toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})} no próximo mês.</p>
+        <p>E a partir dai, ${nome} passa a ganhar R$ ${(salario+aumento).toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})}.</p>
+        <strong>
+            <p>Parabéns ${nome} por essa conquista!</p>
+        </strong>`
+    }
+
+</script>
+</html>

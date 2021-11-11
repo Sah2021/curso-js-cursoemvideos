@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(246, 224, 255);
+        color: rgb(44, 2, 48);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(44, 2, 48);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px rgb(44, 2, 48);
+        font-size: 15pt;
+        padding: 20px;
+    }
+    button:hover{
+        background-color: rgb(224, 169, 250);
+    }    
+           
+</style>
+<!--Fim do CSS-->
+<body>
+    <h1>Trabalhando com dados v1.0</h1>
+    <button onclick="clicar()">Clique para começar</button>    
+</body>
+<script>  
+    function clicar(){
+        var nome = window.prompt('Qual seu nome?')
+        window.alert(`Olá ${nome}! É um prazer te conhecer!`)
+    }
+</script>
+</html>

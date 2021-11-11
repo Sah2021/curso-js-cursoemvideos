@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 06 de JavaScript</title>
+</head>
+
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(238, 229, 213);
+        color: rgb(66, 46, 3);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(44, 29, 2);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px rgb(44, 29, 2);
+        font-size: 20pt;
+        padding: 15px;
+    }
+    button:hover{
+        background-color: rgb(255, 218, 138);
+    }    
+           
+</style>
+<!--Fim do CSS-->
+
+<body>
+    <h1>Desafio 06 de JavaScript</h1>
+    <h2>Conversor de Temperaturas</h2>
+    <button onclick=clicar()>Converter</button>
+    <p>Clique no botão acima para iniciar</p>
+    <section id='res'></section>     
+</body>
+<script>
+    function clicar(){
+        var celsius = Number.parseFloat(window.prompt('Digite uma temperatura em ºC (Celsius)'))
+        var temp = document.querySelector('section#res')
+        temp.innerHTML= ` <p> A temperatura de ${celsius}º Celsius, corresponde a...</p>
+            <p> ${celsius + 273.15}ºK (Kelvin)</p>
+            <p> ${(celsius*9/5) + 32 }ºF (Fahrenheit)</p>`
+    }
+
+
+
+</script>
+
+</html>

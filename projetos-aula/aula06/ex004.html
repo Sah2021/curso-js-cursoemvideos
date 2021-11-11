@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+</head>
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(250, 220, 240);
+        color: rgb(58, 2, 55);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(67, 2, 73);
+    }               
+
+</style>
+
+<!--Fim do CSS-->
+
+<body>
+<h1>Estudando JavaScript</h1>
+<p>Formatando String</p>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?');
+        /* writeln - pula linha 
+        <strong> - deixa a letra em negrito*/
+        document.write (`Olá <strong> ${nome} </strong>! Seu nome tem ${nome.length} letras. </br>`);
+        document.write (`Seu nome em maiúsculas fica assim: ${nome.toUpperCase()} </br>`);
+        document.write (`Seu nome em minúsculas fica assim: ${nome.toLowerCase()}`);
+    </script>
+</body>
+</html>

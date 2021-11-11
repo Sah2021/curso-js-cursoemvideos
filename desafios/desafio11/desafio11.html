@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 11 de JavaScript</title>
+</head>
+
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(238, 229, 213);
+        color: rgb(66, 46, 3);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(44, 29, 2);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px rgb(44, 29, 2);
+        font-size: 20pt;
+        padding: 15px;
+    }
+    button:hover{
+        background-color: rgb(255, 218, 138);
+    }  
+    p#botao{
+        font-size: 15pt;
+    }  
+           
+</style>
+<!--Fim do CSS-->
+
+<body>
+    <h1>Desafio 11 de JavaScript</h1>
+    <h2>Ano Bissexto</h2>
+    <button onclick="verificar()">Verificar</button>
+    <section id="res">
+        <p id='botao'>Clique no botão e informe o ano para saber se ele é bissexto</p>
+    </section> 
+</body>
+<script>
+    function verificar(){
+        var ano = Number(window.prompt('Qual o ano que você quer verificar?'))
+        var res = document.getElementById('res')
+       
+        if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0 ) {          
+            res.innerHTML = `<p><strong> Analisando o ano de ${ano}...</strong></p>
+            <p>O ano de ${ano} <font color = "green"> é bissexto! </font> \u{2705} </p>`
+        } else {
+            res.innerHTML = `<p><strong> Analisando o ano de ${ano}...</strong> </p>
+            <p>O ano de ${ano} <font color = "red"> não é bissexto! </font> \u{274C}</p>`
+        }   
+
+
+    }
+</script>
+</html>

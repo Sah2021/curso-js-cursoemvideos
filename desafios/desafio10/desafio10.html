@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 10 de JavaScript</title>
+</head>
+
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(238, 229, 213);
+        color: rgb(66, 46, 3);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(44, 29, 2);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px rgb(44, 29, 2);
+        font-size: 20pt;
+        padding: 15px;
+    }
+    button:hover{
+        background-color: rgb(255, 218, 138);
+    }  
+    section{
+        padding-left: 30px;
+        padding-right: 30px;
+    }  
+           
+</style>
+<!--Fim do CSS-->
+
+<body>
+    <h1>Desafio 10 de JavaScript</h1>
+    <h2>Resolvendo Bhaskara</h2>
+    <button onclick="calcular()">Calcular</button>
+<section id='res'>
+   <p>Considerando a equação no formato <em><strong>a</strong>x<sup>2</sup> + <strong>b</strong>x + <strong>c</strong> = 0,</em> aperte o botão acima para calcular o valor de &Delta;.</p>
+</section>
+    
+</body>
+<script>
+    function calcular(){
+        var a = Number(window.prompt('Qual o valor de a?'))
+        var b = Number(window.prompt('Qual o valor de b?'))
+        var c = Number(window.prompt('Qual o valor de c?'))
+        var res = document.getElementById('res')
+        var delta = (b*b) - 4*a*(c)
+        res.innerHTML =
+         `<p> A equação atual é ${a}x<sup>2</sup> + ${b}x + ${c} = 0</p>
+        <p> O cálculo realizado será &Delta; = ${b}<sup>2</sup> - 4.${a}.${c}</p>
+        <p> O valor calculado foi &Delta; = ${delta}</p>  `
+
+    }  
+
+</script>
+</html>

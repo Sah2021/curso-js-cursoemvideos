@@ -1,0 +1,42 @@
+body {
+    background: rgb(154, 195, 241);
+    font: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+h1{
+    font-size: 30pt;
+    text-shadow: 1px 1px 3px rgb(8, 8, 8);
+}
+
+header {
+    color: white;
+    text-align: center;
+
+}
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    
+    margin: auto;
+    box-shadow: 1px 1px 5px rgba(7, 7, 7, 0.726);
+
+}
+div{
+    font-size: 20pt;
+    text-align: center;
+    padding: 5px;
+}
+div#saud{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-style: italic;
+
+}

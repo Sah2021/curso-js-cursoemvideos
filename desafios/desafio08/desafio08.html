@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 08 de JavaScript</title>
+</head>
+
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(179, 214, 247);
+        color: rgb(3, 20, 75);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(3, 21, 68);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px rgb(44, 29, 2);
+        font-size: 20pt;
+        padding: 15px;
+    }
+    button:hover{
+        background-color: rgb(221, 247, 196);
+    }    
+           
+</style>
+<!--Fim do CSS-->
+
+<body>
+    <h1>Desafio 08 de JavaScript</h1>
+    <h2>Calcular desconto</h2>
+    <p><button onclick="clicar()">Calcular desconto<br>10%</br></button></p>
+    <section id='res'></section>    
+</body>
+
+<script>
+    function clicar(){
+        var prod = window.prompt('Qual o produto que você está comprando?')
+        var preco = Number.parseFloat(window.prompt(`Qual o valor do(a) ${prod}?`))
+        var result = document.querySelector('section#res')
+        var desc = preco/10
+        result.innerHTML = ` <p>Calculando <strong>desconto de 10%</strong> para ${prod}</p>
+        <p>O preço original é ${preco.toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})}</p>
+        <p>Você recebeu um desconto de ${(preco/10).toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})}</p>
+        Você irá pagar <strong>${(preco-desc).toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})}</strong> pelo(a) ${prod}`
+    }
+</script>
+</html>

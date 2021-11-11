@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02 de JS</title>
+</head>
+
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(163, 175, 163);
+        color: rgb(2, 48, 20);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(2, 53, 11);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px rgb(2, 53, 19);
+        font-size: 15pt;
+        padding: 20px;
+    }
+    button:hover{
+        background-color: rgb(241, 240, 181);
+    }    
+           
+</style>
+<!--Fim do CSS-->
+
+<body>
+    <h1>Desafio 02 de JavaScript</h1>
+    <h2>Boas vindas! &#x1F604</h2>
+    <p>
+        <button onclick="clicou()">Inicie o desafio</button>
+    </p>
+    <script>
+        function clicou(){
+           var nome = window.prompt ('Qual o seu nome?')
+           var idade = window.prompt ('Quantos anos você tem?')
+           window.alert ("Acabei de conhecer a " + nome + " que tem " + idade + " anos. Seja bem vinda!"  )
+        }
+    </script>
+
+    
+</body>
+</html>

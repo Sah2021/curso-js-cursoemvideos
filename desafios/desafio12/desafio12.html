@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 12 de JavaScript</title>
+</head>
+
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(238, 229, 213);
+        color: rgb(66, 46, 3);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(44, 29, 2);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px rgb(44, 29, 2);
+        font-size: 20pt;
+        padding: 15px;
+    }
+    button:hover{
+        background-color: rgb(255, 218, 138);
+    }   
+    p#botao{
+        font-size: 15pt;
+    } 
+           
+</style>
+<!--Fim do CSS-->
+
+<body>
+    <h1>Desafio 12 de JavaScript</h1>
+    <h2>Preço mudou</h2>
+    <p><button onclick = "verificar()">Verificar</button></p>
+    <section id="res">        
+        <p id="botao">Clique no botão acima para analisar a mudança de preço</p>
+    </section>    
+</body>
+<script>
+    function verificar(){
+        var preco1 = Number.parseFloat(window.prompt('Qual o preço antigo do produto?'))
+        var preco2 = Number.parseFloat(window.prompt('Qual o preço atual do produto'))
+        var res = document.getElementById('res')
+        if (preco1 > preco2) {
+            res1 = preco1 - preco2
+            res.innerHTML = `<p><strong>Analisando os valores informados...</strong></p>
+            <p>O produto custava ${preco1.toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})} e agora custa ${preco2.toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})}.</p>
+            <p>Hoje o produto está mais barato!</p>
+            <p>O preço caiu ${res1.toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})} em relação ao anterior.</p>
+            <p>Uma variação de ${(preco2 * 100) / preco1}% para baixo</p>
+            `
+            } else if (preco1 < preco2){                 
+                res2 = preco2 - preco1
+                res.innerHTML = `<p><strong>Analisando os valores informados...</strong></p>
+            <p>O produto custava ${preco1.toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})} e agora custa ${preco2.toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})}.</p>
+            <p>Hoje o produto está mais caro!</p>
+            <p>O preço aumentou ${res2.toLocaleString('pt-Br', {style:'currency', currency: 'BRL'})} em relação ao anterior.</p>
+            <p>Uma variação de ${(preco1*100) / preco2}% para cima</p>   `
+                              
+            }
+    }
+</script>
+</html>

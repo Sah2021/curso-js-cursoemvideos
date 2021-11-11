@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05 de JavaScript</title>
+</head>
+
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(210, 238, 255);
+        color: rgb(26, 17, 107);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(26, 17, 107);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px rgb(4, 26, 85);
+        font-size: 20pt;
+        padding: 15px;
+    }
+    button:hover{
+        background-color: rgb(203, 214, 248);
+    }    
+           
+</style>
+<!--Fim do CSS-->
+
+<body>
+    <h1>Desafio 05 de JavaScript</h1>
+    <h2>Conversor de Medidas</h2>
+    <h3>Clique no botão abaixo para iniciar a conversão...</h3>
+
+    <button onclick="calcular()">Converter</button>
+    <section id="res">
+                <p>A distância de ...</p>
+    </section>
+
+    <script>
+
+        function calcular(){
+
+        var metros = Number.parseFloat(window.prompt('Digite uma distância em metros (m)'))
+        let res = document.querySelector('section#res')
+        res.innerHTML=`<p>A distância de ${metros} metro(s) corresponde a ...
+        <p> ${metros/1000} quilômetros (Km)</p>
+        <p> ${metros/100} hectômetros (Hm)</p>
+        <p> ${metros/10} decâmetros (Dam)</p>
+        <p> ${metros*10} decímetros (dm)</p>
+        <p> ${metros*100} centímetro (cm)</p>
+        <p> ${metros*1000} milímetros (mm)</p>`
+        }       
+     
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    background: rgb(154, 195, 241);
+    font: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+h1{
+    font-size: 30pt;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+header {
+    color: white;
+    text-align: center;
+
+}
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.726);
+
+}
+p#res{
+    color: rgb(28, 91, 184);
+    padding-left: 200px;
+}
+div#seltab{
+    text-align: justify;    
+    padding-left: 200px;
+    color: rgb(28, 91, 184);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-style: italic;
+
+}

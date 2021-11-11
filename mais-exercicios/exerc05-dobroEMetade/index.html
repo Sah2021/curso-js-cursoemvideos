@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<!-- Parte do CSS-->
+<style>
+    body{
+        background-color: rgb(230, 207, 248);
+        color: rgb(48, 2, 12);
+        font: normal  20pt Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgb(48, 2, 12);
+    }   
+    button {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px rgb(48, 2, 12);
+        font-size: 15pt;
+        padding: 20px;
+    }
+    button:hover{
+        background-color: rgb(232, 201, 241);
+    }    
+           
+</style>
+<!--Fim do CSS-->
+<body>
+    <h1>Trabalhando com números</h1>
+    <button onclick="calcular()">Clique para calcular</button>  
+    <div id="res"></div>  
+</body>
+<script>
+      window.alert('Bem-vindo! Vamos calcular?')
+    function calcular(){
+      var num = (window.prompt ('Digite um número inteiro'))
+      res = window.document.getElementById('res')
+      res.innerHTML = `<p>O dobro de ${num} é ${num*2}.</p>
+      <p>A metade de ${num} é ${num/2}.</p>`
+
+    }
+</script>
+</html>

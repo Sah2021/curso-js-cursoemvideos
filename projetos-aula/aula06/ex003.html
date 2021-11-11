@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+
+    <!-- Parte do CSS-->
+    <style>
+        body{
+            background-color: rgb(195, 228, 186);
+            color: rgb(2, 58, 2);
+            font: normal  20pt Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #ffffff;
+            text-shadow: 1px 1px 5px rgb(2, 58, 2);
+        }               
+
+    </style>
+</head>
+<!--Fim do CSS-->
+
+<body>
+    <h1>Estudando JavaScript</h1>
+    <p>Tratamento de Dados</p>
+
+<!-- Início do JS -->
+    <script>
+        /* 
+        Para números reais
+      var n1 = Number.parseFloat (window.prompt ('Digite um número'));
+      var n2 = Number.parseFloat (window.prompt ('Digite outro número'));*/
+        /* 
+        Para números inteiros
+         var n1 = Number.parseInt (window.prompt ('Digite um número'));
+      var n2 = Number.parseInt (window.prompt ('Digite outro número'));*/
+
+      /* Forma atual. Ele sozinho identifica o formato do número */
+      var n1 = Number(window.prompt ('Digite um número'));
+      var n2 = Number (window.prompt ('Digite outro número'));
+    
+      var soma = n1 + n2;
+      /*window.alert('O resultado da soma é ' + soma)*/
+      window.alert(`A soma entre ${n1} + ${n2} é igual a ${soma}`)
+    </script>
+<!--Fim do JS -->
+    
+</body>
+</html>
